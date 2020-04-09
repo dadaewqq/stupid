@@ -1,2 +1,2 @@
 # stupid
-Stop Ask Questions The Stupid Way
+Stop Asking Questions The Stupid Way
