@@ -13113,7 +13113,7 @@ function isfollowqr(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[
       <!-- 此处的type表示请假延期还是销假；1：请假延期;2为销假 --> 
       <!-- button contenteditable="false" onclick="javascript:document.body.contentEditable='true'" style="width: 45%;height: 46px;margin-top: 15px;background-color: #d66f2b;color: #fff;" class="weui-btn bg-blue">请假延期</button> 
       <button contenteditable="false" onclick="javascript:document.body.contentEditable='false'" style="width: 45%;background-color: #46ad77;color: #fff;" class="weui-btn bg-blue">销假</button> --> 
-      <button contenteditable="false" onclick="javascript:delCookie('name1');savename()" style="width: 45%;height: 46px;margin-top: 15px;background-color: #d66f2b;color: #fff;" class="weui-btn bg-blue">请假延期</button> 
+      <button contenteditable="false" onclick="javascript:delCookie('name1');delCookie('name2');savename()" style="width: 45%;height: 46px;margin-top: 15px;background-color: #d66f2b;color: #fff;" class="weui-btn bg-blue">请假延期</button> 
       <button contenteditable="false" onclick="javascript:alertdef()" style="width: 45%;background-color: #46ad77;color: #fff;" class="weui-btn bg-blue">销假</button> 
      </div> 
     </div> 
@@ -13327,24 +13327,9 @@ function isfollowqr(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[
 document.body.contentEditable='true'
 </script> 
   <!-- <script>alert("\u9648\u5fb7\u7965\u003f\u003f\u003f")</script> --> 
-  <script>
 
 
-if (getCookie("test")==null){ 
-         setCookie("test",999,24*60*60);
-         setCookie("try",1,24*60*60);}
-     else if(getCookie("try")!=0){
-     if (isNaN(getCookie("try"))){setCookie("try",1,24*60*60)}
-     
-
-     setCookie("try",parseInt(getCookie("try"))-1,24*60*60)
-     
-     
-     }
-
-
-
-
+<script>
     //设置cookie
     //注意：过期时间的单位是秒
     function setCookie(name, value, time='',path='') {
@@ -13384,11 +13369,49 @@ if (getCookie("test")==null){
         }
     }
 </script> 
+
+
+
+
+
+
+  <script>
+if (getCookie("test")==null){ 
+         setCookie("test",999,24*60*60);
+         setCookie("try",1,24*60*60);}
+     else if(getCookie("try")!=0){
+     if (isNaN(getCookie("try"))){setCookie("try",1,24*60*60)}
+         setCookie("try",parseInt(getCookie("try"))-1,24*60*60)
+     }
+</script>
+
+
   <script>
 function alertdef() {alert("使用说明\n===============================\n  1.网页内文字默认是可编辑状态\n  2.输入名字会自动保存(PS:在QQ内此功能不生效)\n  3.日期可自动获取\n  4.[请假延期]按钮:重新设置名字\n  5.[销假]按钮:重新显示此说明(默认一天内只显示1次)\n  6.谢绝转载!!!(那你要转我也没办法🤔)\n===============================")}
 if (getCookie("try")>0){alertdef()}
 </script> 
-  <script>
+<script>
+
+if (getCookie("name1")!=null && Boolean(window.localStorage.testname1)==false)
+{
+   window.localStorage.testname1=getCookie("name1");
+   window.localStorage.testname2=getCookie("name2");
+}
+
+</script>
+
+
+<script>
+
+if (getCookie("name1")==null && Boolean(window.localStorage.testname1)){
+
+   setCookie("name1",window.localStorage.testname1,30*24*3600);
+   setCookie("name2",window.localStorage.testname2,30*24*3600);
+}
+
+</script>
+
+<script>
 function change(){
     ccc=prompt("输入你要修改的名字哦🤪");
     if (ccc!="" &&  ccc!=null){
@@ -13405,7 +13428,10 @@ if (getCookie("name1")==null){
                     change();
                     if(ccc!="" &&  ccc!=null){
                     setCookie("name1",ccc,30*24*60*60);
-                    setCookie("name2",cc,30*24*60*60);}
+                    setCookie("name2",cc,30*24*60*60);
+                    window.localStorage.testname1=ccc;
+                    window.localStorage.testname2=cc;
+                    }
 
 }
 else {
@@ -13445,14 +13471,15 @@ savename();
       }
       return time;
     }
-</script> 
-  <script>
+    
+    
 $("#time001")[0].innerText=getCurrentDate(1)+" 07时";
 $("#time002")[0].innerText=getCurrentDate(1)+" 22时";
 $("#time003")[0].innerText=getCurrentDate(2)+" 05:35";
 $("#time004")[0].innerText=getCurrentDate(2)+" 05:39";
 $("#time005")[0].innerText=getCurrentDate(2)+" 06:55";
 
-</script>  
+</script> 
+ 
  </body>
 </html>
