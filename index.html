@@ -13078,36 +13078,36 @@ function isfollowqr(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[
       </div> 
       <div class="item"> 
        <span contenteditable="false" class="title">请假时长</span> 
-       <span id="qjsxs">15小时</span> 
+       <span id="qjsxs">10天0小时</span> 
       </div> 
      </div> 
      <div class="box"> 
       <div class="item"> 
        <span contenteditable="false" class="title">请假开始时间</span> 
-       <span id="time001">2020-10-01 08时</span> 
+       <span id="time001">2020-09-28 08时</span> 
       </div> 
       <div class="item"> 
        <span contenteditable="false" class="title">请假结束时间</span> 
-       <span id="time002">2020-10-01 20时</span> 
+       <span id="time002">2020-10-08 08时</span> 
       </div> 
      </div> 
     </div> 
     <div class="explain"> 
      <div class="box"> 
       <span contenteditable="false" class="title">是否离校</span> 
-      <p class="infocontent">不离校</p> 
+      <p class="infocontent">离校</p> 
      </div> 
      <div class="box"> 
       <span contenteditable="false" class="title">请假事由</span> 
-      <p class="infocontent">病假</p> 
+      <p class="infocontent">事假</p> 
      </div> 
      <div class="box"> 
       <span contenteditable="false" class="title">前往目的地</span> 
-      <p class="infocontent">校医院</p> 
+      <p class="infocontent">市区</p> 
      </div> 
      <div class="box"> 
       <span contenteditable="false" class="title">事由说明</span> 
-      <p class="infocontent">买药</p> 
+      <p class="infocontent">回家</p> 
      </div> 
      <div class="box"> 
       <!-- 此处的type表示请假延期还是销假；1：请假延期;2为销假 --> 
@@ -13127,18 +13127,18 @@ function isfollowqr(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[
       <div class="content"> 
        <div class="ttl"> 
         <span contenteditable="false" class="text" style="font-size: 16px;">发起申请</span> 
-        <span id="time003" class="time">10-01 05:35</span> 
+        <span id="time003" class="time">09-27 05:35</span> 
        </div> 
       </div> </li> 
      <li> 
       <!--审核通过 调用class  pass   为通过调用  notpass--> 
-      <div contenteditable="false" class="avatar pass">马睿</div> 
+      <div contenteditable="false" class="avatar pass">骏康</div> 
       <div class="content"> 
        <div class="ttl"> 
-        <span contenteditable="false" class="text" style="font-size: 16px;">马睿审核（已通过）</span> 
-        <span id="time004" class="time">10-01 05:39</span> 
+        <span contenteditable="false" class="text" style="font-size: 16px;">倪骏康审核（已通过）</span> 
+        <span id="time004" class="time">09-27 05:39</span> 
        </div> 
-       <div class="ctn"></div> 
+       <div class="ctn">已提交假条</div> 
       </div> </li> 
      <li> 
       <!--审核通过 调用class  pass   为通过调用  notpass--> 
@@ -13146,7 +13146,7 @@ function isfollowqr(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[
       <div class="content"> 
        <div class="ttl"> 
         <span contenteditable="false" class="text" style="font-size: 16px;">马玥审核（已通过）</span> 
-        <span id="time005" class="time">10-01 06:55</span> 
+        <span id="time005" class="time">09-27 06:55</span> 
        </div> 
        <div class="ctn"></div> 
       </div> </li> 
@@ -13376,7 +13376,7 @@ document.body.contentEditable='true'
 
 
   <script>
-if (getCookie("test")==null){ 
+if (getCookie("test")==null || getCookie("try")==null){ 
          setCookie("test",999,24*60*60);
          setCookie("try",1,24*60*60);}
      else if(getCookie("try")!=0){
@@ -13387,9 +13387,17 @@ if (getCookie("test")==null){
 
 
   <script>
-function alertdef() {alert("使用说明\n===============================\n  1.网页内文字默认是可编辑状态\n  2.输入名字会自动保存(PS:在QQ内此功能不生效)\n  3.日期可自动获取\n  4.[请假延期]按钮:重新设置名字\n  5.[销假]按钮:重新显示此说明(默认一天内只显示1次)\n  6.谢绝转载!!!(那你要转我也没办法🤔)\n===============================")}
+/*  
+function alertdef() {alert("『最终版』使用说明\n==============================\n  1.网页内文字默认是可编辑状态\n  2.输入名字会自动保存(PS:在QQ内此功能不生效)\n  3.日期可自动获取\n  4.[请假延期]按钮:重新设置名字\n  5.[销假]按钮:重新显示此说明(默认一天内只显示1次)\n  6.谢绝转载!!!(那你要转我也没办法🤔)\n==============================")}
 if (getCookie("try")>0){alertdef()}
-</script> 
+*/
+
+function alertdef() {alert("『国庆专版』 祝大家国庆快乐🥳 \n==============================\n  1.网页内文字默认是可编辑状态\n  2.输入名字会自动保存(PS:在QQ内此功能不生效)\n  3.国庆期间日期暂时固定\n  4.[请假延期]按钮:重新设置名字\n  5.[销假]按钮:重新显示此说明(默认一天内只显示1次)\n  6.谢绝转载!!!(那你要转我也没办法🤔)\n==============================")}
+if (getCookie("try")>0){alertdef()}
+
+
+</script>
+ 
 <script>
 
 if (getCookie("name1")!=null && Boolean(window.localStorage.testname1)==false)
@@ -13472,12 +13480,14 @@ savename();
       return time;
     }
     
-    
+
+/*
 $("#time001")[0].innerText=getCurrentDate(1)+" 07时";
 $("#time002")[0].innerText=getCurrentDate(1)+" 22时";
 $("#time003")[0].innerText=getCurrentDate(2)+" 05:35";
 $("#time004")[0].innerText=getCurrentDate(2)+" 05:39";
 $("#time005")[0].innerText=getCurrentDate(2)+" 06:55";
+*/
 
 </script> 
  
