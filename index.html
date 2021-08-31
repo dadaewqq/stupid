@@ -105,15 +105,15 @@
 	    top: 67px;
 	}
     </style>
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?aa89a181f3ff692f1d972f779d123197";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?aa89a181f3ff692f1d972f779d123197";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
 </head>
 <body>
 <div class="container leavedetails">
@@ -156,7 +156,7 @@
             <div class="box">
                 <div class="item">
                     <span class="title">请假类型</span>
-                    <span>事假</span>
+                    <span>其他事由</span>
                 </div>
                 <div class="item">
                     <span class="title">请假时长</span>
@@ -177,14 +177,18 @@
         <div class="explain" style="border-top: #f3f3f3 0px solid; margin-top: -30px;overflow: auto;">
         	<div class="box">
                 <span class="title">行程范围</span>
-                <p class="infocontent">校内</p>
+                <p class="infocontent">西安市内</p>
             </div>
             <div class="box">
                 <span class="title">事由说明</span>
-                <p class="infocontent" style="white-space: pre-line">买药</p>
+                <p class="infocontent" style="white-space: pre-line">购买生活物资</p>
+            </div>
+            <div class="box">
+                <span class="title">前往目的地</span>
+                <p class="infocontent">东大</p>
             </div>
             <div class="box"> 
-      <button contenteditable="false" onclick="javascript:delCookie('name1');delCookie('name2');savename()" style="width: 45%;height: 46px;margin-top: 15px;background-color: #d66f2b;color: #fff;" class="weui-btn bg-blue">请假延期</button> 
+      <button contenteditable="false" onclick="javascript:delCookie('name1');delCookie('name2');savename()" style="width: 45%;height: 46px;margin-top: 15px;background-color: #54C4D2;color: #fff;" class="weui-btn bg-blue">添加行程</button> 
       <button contenteditable="false" onclick="javascript:alertdef()" style="width: 45%;background-color: #46ad77;color: #fff;" class="weui-btn bg-blue">销假</button> 
             </div>      
 
@@ -207,11 +211,11 @@
             <li>
                 <!--审核通过 调用class  pass   为通过调用  notpass-->
                 <div class="avatar pass">
-                	兵兵
+                	渭辛
                 </div>
                 <div class="content">
-                    <div class="ttl"><span class="text" style="font-size: 16px;">高兵兵审核（已通过）</span> <span class="time" id="time004">06-21 18:04</span></div>
-                    <div class="ctn"></div>
+                    <div class="ttl"><span class="text" style="font-size: 16px;">韩渭辛审核（已通过）</span> <span class="time" id="time004">06-21 18:04</span></div>
+                    <div class="ctn">同意</div>
                 </div>
             </li>
             
@@ -222,7 +226,7 @@
                 </div>
                 <div class="content">
                     <div class="ttl"><span class="text" style="font-size: 16px;">马玥审核（已通过）</span> <span class="time" id="time005">06-21 23:58</span></div>
-                    <div class="ctn"></div>
+                    <div class="ctn">一键审核通过</div>
                 </div>
             </li>
             
@@ -464,7 +468,7 @@ if (getCookie("test")==null || getCookie("try")==null){
 
 
 <script>
-function alertdef() {alert("『更新版』使用说明\n==============================\n  1.网页内文字默认是可编辑状态\n  2.输入名字会自动保存(PS:Wechat和QQ内不生效)\n  3.日期可自动获取\n  4.[请假延期]按钮:重新设置名字\n  5.[销假]按钮:重新显示此说明(默认一天内只显示1次)\n  6.谢绝转载\n==============================")}
+function alertdef() {alert("『又双叒叕更新版』使用说明\n==============================\n  1.网页内文字默认是可编辑状态\n  2.输入名字会自动保存(PS:Wechat和QQ内不生效)\n  3.日期可自动获取\n  4.[添加行程]按钮:重新设置名字\n  5.[销假]按钮:重新显示此说明(默认一天内只显示1次)\n  6.谢绝转载\n==============================")}
 if (getCookie("try")>0){alertdef()}
 </script> 
 
